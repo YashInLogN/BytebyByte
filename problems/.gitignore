@@ -1,0 +1,12 @@
+# Build artifacts / compiled binaries
+output/
+*.dSYM/
+*.o
+*.out
+
+# macOS junk
+.DS_Store
+
+# Editor/IDE clutter (uncomment if relevant)
+# .vscode/
+# .idea/

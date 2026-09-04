@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/yashchaudhary/Documents/bytebybyte/basic/output/bit_to_int'
-relocations:     []
-...
