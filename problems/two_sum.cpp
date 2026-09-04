@@ -21,12 +21,3 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return {}; // no solution found (won't happen per problem constraints)
 }
 
-int main() {
-    vector<int> nums = {0, 1, 2, 2};
-    vector<int> result = twoSum(nums, 2);
-    for(int i: result){
-        cout << i << " ";
-    }cout << endl;
-    return 0;
-}
-
