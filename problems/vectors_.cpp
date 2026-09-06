@@ -17,5 +17,11 @@ int main() {
         cout << element << " ";
     }
     cout << endl;
+
+    vector<int> v(3, 0); // Initialize a vector of size 3 with all elements as 0
+    for(const int& element : v) {
+        cout << element << " ";
+    }
+    cout << endl;
     return 0;
 }
