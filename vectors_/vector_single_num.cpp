@@ -14,18 +14,10 @@ int singleNumber(vector<int>& nums) {
     return 0;
 };
 
-int main() {
-    vector<int> nums;
-    int n;
-    cout << "Enter the number of elements: ";
-    cin >> n;
-    cout << "Enter the elements: ";
-    for(int i = 0; i < n; i++) {
-        int element;
-        cin >> element;
-        nums.push_back(element);
-    }   
-    int result = singleNumber(nums);
-    cout << "The single number is: " << result << endl;
-    return 0;
-}
+// int singleNumber_2(vector<int>& nums) {
+//     int result = 0;
+//     for(int i = 0; i < nums.size(); i++){
+//         result ^= nums[i];
+//     }
+//     return result;
+// };
