@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    vector<int> vec;
+    vector<int> vec; // Create an empty vector of integers
     int n;
     cout << "Enter the number of elements: ";
     cin >> n;
