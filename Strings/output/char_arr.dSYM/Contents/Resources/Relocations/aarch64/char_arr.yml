@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/yashchaudhary/Documents/bytebybyte/char_arr/output/char_arr'
+relocations:     []
+...
