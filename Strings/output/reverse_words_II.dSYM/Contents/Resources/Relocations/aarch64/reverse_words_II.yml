@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/yashchaudhary/Documents/bytebybyte/Strings/output/reverse_words_II'
+relocations:     []
+...

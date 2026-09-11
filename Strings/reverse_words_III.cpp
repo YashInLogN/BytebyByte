@@ -17,6 +17,22 @@ string reverseWords(string s) {
     return result;
 }
 
+string reverseWords2(string s) {
+    istringstream iss(s);
+    string word;
+    vector<string> words;
+    while(iss >> word){
+        words.push_back(word);
+    }
+    string result;
+    for(int i = 0; i < words.size(); i++){
+        reverse(word.begin(), word.end());
+        result += words[i];
+        if(i != words.size() - 1) result += " ";
+    }
+    return result;
+}
+
 int main() {
     string input;
     cout << "Enter a string: ";
