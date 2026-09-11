@@ -13,7 +13,7 @@ string removeSubstring(string str, string sub) {
 }
 
 string removeSubstring2(string str, string sub) {
-    vector<char> stack;
+    string stack;
     int n = sub.size();
     for(auto c: str){
         stack.push_back(c);
@@ -30,11 +30,7 @@ string removeSubstring2(string str, string sub) {
             }
         }
     }
-    string result;
-    for(auto c: stack){
-        result += c;
-    }
-    return result;
+    return stack;
 }
 
 int main() {
