@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <cctype>
 using namespace std;
 
 string reverseWords(string s) {
