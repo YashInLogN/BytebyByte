@@ -16,6 +16,14 @@ string replaceSpaces(const string &str) {
     return result;
 }
 
+string removeSpaces(string str) {
+    for(auto &c: str) {
+        if(isspace(static_cast<unsigned char>(c))) {
+            c = '\0'; // Replace space with null character
+        }
+    }
+    return str;
+}
 int main() {
     string input;
     cout << "Enter a string: ";
