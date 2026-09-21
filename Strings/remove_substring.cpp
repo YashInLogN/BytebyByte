@@ -3,11 +3,9 @@
 #include <vector>
 using namespace std;
 
-string removeSubstring(string str, string sub) {
-    size_t pos = str.find(sub);
-    while (pos != string::npos) {
-        str.erase(pos, sub.length());
-        pos = str.find(sub);
+string removeSubstring(string str, const string& part){
+    while(str.length() != 0 && str.find(part) < str.length()){
+        str.erase(str.find(part), part.length());
     }
     return str;
 }
@@ -39,7 +37,7 @@ int main() {
     getline(cin, input);
     cout << "Enter the substring to remove: ";
     getline(cin, substring);
-    string result = removeSubstring2(input, substring);
+    string result = removeSubstring(input, substring);
     cout << "String after removing substring: " << result << endl;
     return 0;
 }

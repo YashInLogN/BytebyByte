@@ -28,7 +28,7 @@ int main() {
     string input;
     cout << "Enter a string: ";
     getline(cin, input);
-    string result = replaceSpaces(input);
-    cout << "String after replacing spaces: " << result << endl;
+    string result = removeSpaces(input);
+    cout << "String after removing spaces: " << result << endl;
     return 0;
 }

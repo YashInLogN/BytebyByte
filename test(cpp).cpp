@@ -87,9 +87,9 @@ string reverseWords(string &str){
 }
 
 string removeSubstring(const string& str, const string& sub){
-    string stack;
+    string stack = "";
     int n = sub.size();
-    for(auto c: str){
+    for(const char& c: str){
         stack.push_back(c);
         if(stack.size() >= n){
             bool match = true;
@@ -98,7 +98,8 @@ string removeSubstring(const string& str, const string& sub){
                     match = false;
                     break;
                 }
-            }if(match){
+            }
+            if(match){
                 stack.resize(stack.size() - n);
             }
         }
