@@ -107,6 +107,26 @@ string removeSubstring(const string& str, const string& sub){
     return stack;
 }
 
+bool checkInclusion(string &s1, string &s2){
+    int m = s2.size(), n = s1.size();
+    int charCount[26] = {0};
+    int charCount2[26] = {0};
+
+    for(int i = 0; i < n; i++){
+        charCount[s1[i] - 'a']++;
+        charCount2[s2[i] - 'a']++;
+    }
+
+    if(equal(charCount, charCount + 26, charCount2)) return true;
+
+    for(int i = n; i < m; i++){
+        charCount2[s2[i] - 'a']++;
+        charCount2[s2[i - n] - 'a']--;
+        if(equal(charCount, charCount + 26, charCount2)) return true;
+    }
+
+    return false;
+}
 int main() {
     string input;
     cout << "Enter a string: ";
