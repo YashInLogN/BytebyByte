@@ -3,15 +3,25 @@
 #include <unordered_map>
 using namespace std;
 
-bool checkInclusion(string &str1, string &part){
+bool checkInclusion(string &s1, string &s2){
+    int m = s2.size(), n = s1.size();
     int charCount[26] = {0};
-    int m = str1.size(), n = part.size();
-    if(n > m) return false;
-    for(int i = 0; i < m; i++) {
-        int index = str1[i] - 'a';
-        charCount[index]++;
+    int charCount2[26] = {0};
+
+    for(int i = 0; i < n; i++){
+        charCount[s1[i] - 'a']++;
+        charCount2[s2[i] - 'a']++;
     }
-    
+
+    if(equal(charCount, charCount + 26, charCount2)) return true;
+
+    for(int i = n; i < m; i++){
+        charCount2[s2[i] - 'a']++;
+        charCount2[s2[i - n] - 'a']--;
+        if(equal(charCount, charCount + 26, charCount2)) return true;
+    }
+
+    return false;
 }
 
 int main() {
