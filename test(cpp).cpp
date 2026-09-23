@@ -2,6 +2,7 @@
 #include <string>
 #include <unordered_map>
 #include <sstream>
+#include <vector>
 using namespace std;
 
 
@@ -127,6 +128,19 @@ bool checkInclusion(string &s1, string &s2){
 
     return false;
 }
+
+vector<int> spiralMatrix(vector<vector<int>> nums, int rows, int cols){
+    vector<int> result;
+    int top = 0, bottom = rows - 1, left = 0, right = cols - 1;
+    while(top <= bottom && left <= right){
+        for(int i = 0; i < rows; i++){
+            result.push_back(nums[top][i]);
+        }
+        top++;
+        
+    }
+}
+
 int main() {
     string input;
     cout << "Enter a string: ";

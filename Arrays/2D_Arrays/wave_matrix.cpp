@@ -2,7 +2,7 @@
 using namespace std;
 
 
-void wavePrint(int arr[][100], int rows, int cols){
+void waveMatrix(int arr[][100], int rows, int cols){
     for(int col = 0; col < cols; col++) {
         if(col % 2 != 0) {
             for(int row = rows-1; row >= 0; row--) 
@@ -33,7 +33,7 @@ int main(){
         }
         cout << endl;
     }
-    wavePrint(arr, rows, cols);
+    waveMatrix(arr, rows, cols);
     cout << endl;
     return 0;
 }
