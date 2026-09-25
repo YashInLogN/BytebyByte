@@ -5,13 +5,29 @@ using namespace std;
 
 vector<int> rotateMatrix90(vector<vector<int>> &matrix){
     vector<int> result;
-    int n = matrix.size();
-    for(int col = 0; col < n; col++){
-        for(int row = n - 1; row >= 0; row--){
+    int size = matrix.size();
+    for(int col = 0; col < size; col++){
+        for(int row = size-1; row >= 0; row--){
             result.push_back(matrix[row][col]);
         }
     }
     return result;
+}
+
+void rotateMatrix90InPlace(vector<vector<int>> &matrix){
+    int n = matrix.size();
+
+    // Transpose the matrix
+    for(int row = 0; row < n; row++){
+        for(int col = row + 1; col < n; col++){
+            swap(matrix[row][col], matrix[col][row]);
+        }
+    }
+
+    // Reverse each row
+    for(int i = 0; i < n; i++){
+        reverse(matrix[i].begin(), matrix[i].end());
+    }
 }
 
 int main() {
