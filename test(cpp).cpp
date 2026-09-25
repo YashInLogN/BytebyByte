@@ -157,6 +157,14 @@ vector<int> spiralMatrix(vector<vector<int>> nums, int rows, int cols){
     return result;
 }
 
+void transposeMatrix(int arr[][100], int rows, int cols){
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            arr[i][j] = arr[j][i];
+        }
+    }
+}
+
 int main() {
     string input;
     cout << "Enter a string: ";
@@ -176,6 +184,7 @@ int main() {
 
     string reversedWords = reverseWords(input);
     cout << "Reversed words: " << reversedWords << endl;
+
 
     return 0;
 }
