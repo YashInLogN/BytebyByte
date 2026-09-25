@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-bool binarySearch2D(vector<vector<int>> &matrix, int target){
+bool search2D(vector<vector<int>> &matrix, int target){
     int rows = matrix.size();
     int cols = matrix[0].size();
     int start = 0, end = rows * cols - 1;
@@ -37,7 +37,7 @@ int main(){
     int target;
     cout << "Enter the target element to search: ";
     cin >> target;
-    if(binarySearch2D(matrix, target)){
+    if(search2D(matrix, target)){
         cout << "Element found in the array." << endl;
     } else {
         cout << "Element not found in the array." << endl;
