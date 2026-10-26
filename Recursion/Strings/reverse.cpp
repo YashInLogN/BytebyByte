@@ -3,8 +3,7 @@
 using namespace std;
 
 void reverse(string &str, size_t i = 0){
-    if(i + 1 >= str.size()) return;
-    if(i >= str.size()/2) return;
+    if(i + 1 >= str.size() || i >= str.size()/2) return;
     swap(str[i], str[str.size() - 1 - i]);
     reverse(str, i + 1);
 }
