@@ -165,6 +165,7 @@ void transposeMatrix(int arr[][100], int rows, int cols){
     }
 }
 
+
 int main() {
     string input;
     cout << "Enter a string: ";
