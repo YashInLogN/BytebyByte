@@ -17,7 +17,6 @@ int reverse(int n){
 void sayDigit(int num){
     if(num == 0) return;
     string nums[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-    // string nums[10] = {"nine", "eight", "seven", "six", "five", "four", "three", "two", "one", "zero"};
     cout << nums[num % 10] << " ";
     sayDigit(num/10);
 }
